@@ -242,9 +242,21 @@ a {
   width: 100%;
   border-radius: 0 0 10px 10px;
   border: 0;
-  top: -10px !important;
   padding: 0 20px 20px;
-  background: #E5F5FF; }
+  background: #E5F5FF;
+  position: absolute !important;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+  top: 75% !important;
+  left: auto !important;
+  right: 50% !important;
+  transform: translate(50%, 0) !important; }
+  .dropdown-1 .dropdown-menu.show {
+    opacity: 1;
+    pointer-events: inherit;
+    top: 90% !important; }
 .dropdown-1.show .dropdown-toggle {
   border-radius: 10px 10px 0 0;
   box-shadow: none; }
