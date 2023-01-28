@@ -244,7 +244,8 @@ a {
   border: 0;
   top: -10px !important;
   padding: 0 20px 20px;
-  background: #E5F5FF; }
+  background: #E5F5FF;
+  transform: translate3d(0px, 81px, 0px) !important; }
 .dropdown-1.show .dropdown-toggle {
   border-radius: 10px 10px 0 0;
   box-shadow: none; }
