@@ -225,6 +225,14 @@ a
 	color: $color-dark-blue
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2)
 	line-height: 1.2
+	// height: 81px
+	// max-height: 81px
+	// white-space: nowrap
+	// text-overflow: ellipsis
+	// overflow: hidden
+	// @media (max-width: 575.98px)
+	// 	height: 98px
+	// 	max-height: 98px
 	&:hover
 		opacity: 1
 		box-shadow: none
@@ -242,7 +250,8 @@ a
 		top: -10px !important
 		padding: 0 20px 20px
 		background: $color-light-blue
-		transform: translate3d(0px, 81px, 0px) !important
+		// @media (max-width: 575.98px)
+		// 	transform: translate3d(0px, 98px, 0px) !important
 	&.show 
 		.dropdown-toggle
 			border-radius: 10px 10px 0 0 
@@ -472,12 +481,10 @@ ul
 	text-align: center
 	color: $color-white
 	.donut
-		overflow: initial
 		display: inline-block
 		&:hover
 			opacity: 1
-			img
-				transform: scale(1.2) 
+			transform: scale(1.2) 
 	.footer-link
 		color: $color-white
 		display: inline-block
