@@ -256,10 +256,11 @@ a {
   .dropdown-1 .dropdown-menu.show {
     opacity: 1;
     pointer-events: inherit;
-    top: 90% !important; }
+    top: 90% !important;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1); }
 .dropdown-1.show .dropdown-toggle {
   border-radius: 10px 10px 0 0;
-  box-shadow: none; }
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1); }
 
 .white-line {
   height: 2px;
@@ -571,8 +572,9 @@ ul {
     @media (min-width: 1200px) {
       .section-joindonuts .joindonuts-rotate {
         position: absolute;
+        width: 400px;
         top: 50%;
-        right: -28%;
+        right: -110%;
         transform: translateY(-50%) rotate(-90deg); } }
 
 .title-donation {
