@@ -724,14 +724,13 @@ ul
 		transform: translate(10px, -10px)
 		@media (max-width: 575.98px)
 			width: calc(100% - 20px)
-	&:nth-of-type(3)
-		@media (max-width: 575.98px)
-			opacity: 0
 	@for $i from 2 through 10
 		&:nth-of-type(#{$i}) 
 			z-index: 1 - $i
 			bottom: 40px * ($i - 2) 
 			left: 120px * ($i - 2) 	
+			@media (max-width: 575.98px)
+				width: calc(100% - 20px)
 
 .glide-up-first, .glide-down-first, .glide-up-last, .glide-down-last 
 	opacity: 0!important
