@@ -9,12 +9,54 @@ $(function() {
   Waves.attach('.btn',  ['waves-light']);
   Waves.init();
 
-  $(".owl-1").owlCarousel({
-    items: 1,
-    dots: true,
-    margin: 15,
-    smartSpeed: 1000,
-  });
+((w, d, u, n) => {
+  let opCSlider = {pause: (ms) => new Promise((r) => setTimeout(r, ms)),
+  events: {
+    click: async (e) => {
+      if (e.target.classList.contains(`arrow-left`) &&
+          e.target.parentElement.parentElement.classList.contains(
+              `module-cascade-slider`)) {
+          e.target.parentElement.parentElement.children[1].classList.add(
+              `glide-up-first`);
+          await opCSlider.pause(200);
+          e.target.parentElement.parentElement.children[1].classList.remove(
+              `glide-up-first`);
+          e.target.parentElement.parentElement.children[1].classList.add(
+              `glide-up-last`);
+          e.target.parentElement.parentElement.appendChild(
+          e.target.parentElement.parentElement.children[1]);
+          await opCSlider.pause(200);
+          e.target.parentElement.parentElement.lastElementChild.classList.remove(
+              `glide-up-last`);}
+      if (e.target.classList.contains(`arrow-right`) &&
+          e.target.parentElement.parentElement.classList.contains(
+              `module-cascade-slider`)) {
+          e.target.parentElement.parentElement.lastElementChild.classList.add(
+              `glide-down-last`);
+          await opCSlider.pause(200);
+          e.target.parentElement.parentElement.lastElementChild.classList.remove(
+              `glide-down-last`);
+          e.target.parentElement.parentElement.lastElementChild.classList.add(
+              `glide-up-first`);
+          e.target.parentElement.parentElement.insertBefore(
+          e.target.parentElement.parentElement.lastElementChild,
+          e.target.parentElement.parentElement.children[1]);
+          await opCSlider.pause(200);
+          e.target.parentElement.parentElement.children[1].classList.remove(
+              `glide-up-first`);}
+        }
+      }
+    };
+    d.addEventListener(`click`, opCSlider.events.click);
+    w.addEventListener(`beforeunload`, () => {
+    d.removeEventListener(`click`, opCSlider.events.click);
+    opCSlider = u;});
+  })(
+    window,
+    document,
+    undefined,
+    null
+  );
 
 });
 
