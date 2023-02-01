@@ -92,6 +92,10 @@ a
 		&:hover 
 			text-decoration: none !important
 			color: #005E99
+	&.learn-more
+		font-size: 20px
+		@media (max-width: 767.98px)
+			font-size: 16px
 	&.back
 		color: $color-dark-blue
 		display: inline-block
@@ -153,8 +157,10 @@ a
 		font-size: 28px
 .fz-50
 	font-size: 50px
-	@media (max-width: 767.98px)
-		font-size: 34px
+	@media (max-width: 1199.98px)
+		font-size: 30px
+	@media (max-width: 575.98px)
+		font-size: 18px
 
 .lh-1
 	line-height: 1
@@ -171,13 +177,19 @@ a
 	font-size: 46px
 	line-height: 1
 	@media (max-width: 1199.98px)
-		font-size: 42px
+		font-size: 36px
 	@media (max-width: 767.98px)
-		font-size: 32px
+		font-size: 30px
+	@media (max-width: 575.98px)
+		font-size: 24px
 
 .h1 
 	font-family: 'Nunito', sans-serif
 	color: $color-white
+	@media (max-width: 767.98px)
+		font-size: 28px
+	@media (max-width: 575.98px)
+		font-size: 16px
 
 .h2, h2
 	font-weight: 600
@@ -185,6 +197,8 @@ a
 	line-height: 1
 	@media (max-width: 767.98px)
 		font-size: 28px
+	@media (max-width: 575.98px)
+		font-size: 16px
 
 .h3, h3
 	font-weight: bold
@@ -192,6 +206,32 @@ a
 	line-height: 1
 	@media (max-width: 767.98px)
 		font-size: 26px
+	@media (max-width: 575.98px)
+		font-size: 16px
+
+.title-content
+	font-family: 'Roboto', sans-serif
+	font-size: 24px
+	line-height: 1.3
+	color: #404040
+	@media (max-width: 767.98px)
+		font-size: 14px
+
+.link-logo
+	line-height: 1
+	font-weight: bold
+	font-size: 32px
+	img 
+		width: 32px
+	.powered
+		font-weight: normal
+		font-size: 24px
+	@media (max-width: 767.98px)
+		font-size: 20px
+		img 
+			width: 20px
+		.powered
+			font-size: 16px
 
 .header-top
 	background: $color-footer
@@ -202,6 +242,8 @@ a
 .language-link
 	color: #A6A6A6
 	font-weight: bold
+	@media (max-width: 575.98px)
+		font-size: 14px
 	&:hover, &.active
 		color: $color-white
 		opacity: 1
@@ -238,6 +280,9 @@ a
 			display: none
 
 .dropdown-1
+	@media (max-width: 575.98px)
+		margin-left: -15px
+		margin-right: -15px
 	.dropdown-menu
 		margin-top: 0
 		width: 100%	
@@ -316,9 +361,6 @@ a
 		font-weight: bold
 		color: $color-dark-blue
 		padding: 4px 65px
-		@media (max-width: 767.98px)
-			height: 50px
-			font-size: 32px
 		&::-webkit-input-placeholder
 			color: $color-dark-blue
 			font-weight: bold
@@ -354,9 +396,12 @@ input
 	margin-bottom: 0
 	width: 100px
 	cursor: pointer
+	@media (max-width: 575.98px)
+		width: 100%
+		font-size: 16px
 	input
 		~ div
-			padding: 10px
+			padding: 10px 4px
 			border-radius: 12px
 			border: 1px solid $color-blue
 		&:hover
@@ -419,11 +464,38 @@ label
 	&:focus
 		box-shadow: none
 
+.box-info
+	margin-bottom: 12px
+	img
+		@media (max-width: 767.98px) 
+			width: 24px
+	.number
+		font-size: 32px
+		font-weight: bold 
+		line-height: 1
+		@media (max-width: 767.98px)
+			font-size: 18px
+	.title
+		font-size: 16px
+		@media (max-width: 767.98px)
+			font-size: 12px
+
+// GAZ
+
 .box-gaz
-	background: $color-white
-	overflow: hidden
-	border-radius: 20px
-	box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.05)
+	img 
+		width: 200px
+	@media (min-width: 768px)
+		background: $color-white
+		overflow: hidden
+		border-radius: 20px
+		box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.05)
+		img 
+			width: auto
+
+.text-about
+	@media (max-width: 767.98px) 
+		font-size: 14px
 
 .box-news
 	border-radius: 50px
@@ -443,8 +515,10 @@ label
 	background-size: cover
 	background-position: center center
 	min-height: 324px
-	@media (min-width: 576px) and (max-width: 1199.98px) 
+	@media (max-width: 1199.98px) 
 		min-height: 260px
+	@media (max-width: 776.98px) 
+		min-height: 240px
 
 ul
 	padding-left: 30px 
@@ -468,6 +542,8 @@ ul
 	line-height: 1.4
 	@media (max-width: 767.98px)
 		font-size: 16px
+	@media (max-width: 575.98px)
+		font-size: 14px
 
 .cart-media
 	padding: 30px 
@@ -477,9 +553,21 @@ ul
 	display: flex
 	flex-direction: column
 	height: 100%
-	min-height: 310px
-	@media (max-width: 767.98px)
-		padding: 30px 20px
+	@media (max-width: 1199.98px)
+		padding: 20px
+
+.scroll-media
+	flex-wrap: nowrap
+	overflow: auto
+	&.row-20
+		@media (max-width: 575.98px)
+			margin-left: -15px
+			margin-right: -15px
+			> [class*='col']
+				padding-left: 15px
+				padding-right: 0
+				&:last-child
+					padding-right: 15px
 
 .footer 
 	padding: 20px 0
@@ -497,22 +585,30 @@ ul
 		display: inline-block
 		font-size: 20px
 		font-weight: 500
-		margin: 0 10px
-		@media (max-width: 575.98px)
-			margin: 0 10px 4px
-			font-size: 18px
+		margin: 0 16px
+		@media (max-width: 767.98px)
+			margin: 0 0 4px
+			font-size: 12px
 		&:hover
 			color: $color-white
 	.footer-brand
 		color: $color-white
 		font-size: 20px
+		@media (max-width: 767.98px)
+			font-size: 16px
 		&:hover
 			color: $color-white
 		.title
 			font-size: 24px
 			font-weight: bold 
+			@media (max-width: 767.98px)
+				font-size: 16px
 			.point
 				color: #FFA62B
+	.all-rights
+		font-weight: 300
+		@media (max-width: 767.98px)
+			font-size: 12px
 
 .social 
 	color: $color-white 
@@ -536,6 +632,8 @@ ul
 			border: 0
 			border-radius: 0
 			min-height: 100vh
+			@media (max-width: 575.98px)
+				padding: 50px 0
 	.donation-title
 		font-family: 'Montserrat', sans-serif
 		font-weight: 900
@@ -577,22 +675,26 @@ ul
 			width: 198px
 		@media (min-width: 1200px)
 			position: absolute
-			width: 400px
+			width: calc(100vh - 40px)
 			top: 50%
-			right: -110%
-			transform: translateY(-50%) rotate(-90deg)
+			left: 50%
+			transform: translate(-50%, -50%) rotate(-90deg)
 
 .title-donation
 	font-size: 24px
 	font-weight: bold
 	font-family: 'Lato', sans-serif
 	color: $color-main
+	@media (max-width: 767.98px)
+		font-size: 20px
 
 .comment-donation
 	font-weight: 600
 	font-family: 'Nunito', sans-serif
 	font-size: 20px
 	color: $color-main
+	@media (max-width: 767.98px)
+		font-size: 16px
 
 .form-name
 	width: 100%
@@ -651,31 +753,28 @@ ul
 
 .overflow-hidden-box
 	overflow: hidden !important
-	padding-bottom: 50px
-	@media (max-width: 767.98px)
-		padding-bottom: 100px
+	> div:first-child
+		padding-bottom: 50px
+		@media (max-width: 1199.98px)
+			padding-bottom: 30px
+		@media (max-width: 767.98px)
+			padding-bottom: 80px
 
-.module-cascade-slider 
+.module-cascade-slider
 	position: relative
-	width: 380px
-	max-width: 380px
-	height: 300px
-	display: flex 
-	margin: auto
-	@media (max-width: 575.98px)
-		width: 100%
+	display: flex
+	justify-content: center
 
 .arrow-container 
 	position: absolute 
 	z-index: 10 
-	bottom: 50%
-	left: 50%
-	transform: translate(-50%, 50%)
+	top: 50%
+	left: 0
+	right: 0
 	@media (max-width: 767.98px)
-		bottom: -14px
-		transform: translate(-50%, 0)
+		top: auto
+		bottom: 0
 	.arrow
-		margin: 5px
 		position: absolute
 		display: inline-block
 		height: 42px
@@ -684,54 +783,61 @@ ul
 		text-align: center
 		font-size: 20px
 		font-weight: bold
-		line-height: 32px
+		line-height: 34px
 		color: #B2E2FF
-		border: 5px solid #B2E2FF
+		border: 4px solid #B2E2FF
 		border-radius: 100px
 		cursor: pointer
-		&.arrow-right
-			right: 220px
-			@media (max-width: 767.98px)
-				right: 20px
+		transform: translateY(-50%)
+		transition: all $transition
+		@media (max-width: 767.98px)
+			transform: translateY(50%)
 		&.arrow-left
-			left: 220px
-			@media (max-width: 767.98px)
-				left: 20px
+			right: 0
+		&.arrow-right
+			left: 0
 		&:hover 
 			background: $color-blue
 			border-color: $color-blue
 			color: $color-white
 			transition: all $transition
 		&:active 
-			transform: scale(.8)
-			transition: all $transition
+			transform: translateY(-50%) scale(.8)
+			@media (max-width: 767.98px)
+				transform: translateY(50%) scale(.8)
+
+.item-container
+	position: relative
+	display: flex
+	flex-wrap: nowrap
+	width: 380px
+	height: 280px
+	@media (max-width: 575.98px)
+		width: 290px
 
 .item 
 	position: absolute
-	height: 250px
 	width: 250px
-	padding: 25px 15px
+	height: 250px
+	padding: 25px
 	border-radius: 22px
 	box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.1)
 	transition: all $transition
-	&:not(:nth-of-type(2))
+	&:not(:nth-of-type(1))
 		background: #F7F7F7
 		div
 			opacity: .5
-	&:not(:nth-of-type(2), :nth-of-type(3))
+	&:not(:nth-of-type(1), :nth-of-type(2))
 		opacity: 0
-	&:nth-of-type(2) 
-		transform: translate(10px, -10px)
-		@media (max-width: 575.98px)
-			width: calc(100% - 20px)
-	@for $i from 2 through 10
+	&:nth-of-type(1) 
+	@for $i from 1 through 10
 		&:nth-of-type(#{$i}) 
 			z-index: 1 - $i
-			bottom: 40px * ($i - 2) 
-			left: 120px * ($i - 2) 	
+			bottom: 30px * ($i - 1) 
+			left: 130px * ($i - 1) 	
 			@media (max-width: 575.98px)
-				width: calc(100% - 20px)
+				left: 40px * ($i - 1) 
 
 .glide-up-first, .glide-down-first, .glide-up-last, .glide-down-last 
-	opacity: 0!important
+	opacity: 0 !important
 

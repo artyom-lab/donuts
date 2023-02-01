@@ -1,7 +1,7 @@
 $(function() {
 
   $(document).on('click.bs.dropdown.data-api', '.dropdown-menu', function (e) { 
-	e.stopPropagation();
+  e.stopPropagation();
   });
 
 
@@ -16,33 +16,33 @@ $(function() {
       if (e.target.classList.contains(`arrow-left`) &&
           e.target.parentElement.parentElement.classList.contains(
               `module-cascade-slider`)) {
-          e.target.parentElement.parentElement.children[1].classList.add(
+          e.target.parentElement.parentElement.children[1].children[0].classList.add(
               `glide-up-first`);
           await opCSlider.pause(200);
-          e.target.parentElement.parentElement.children[1].classList.remove(
+          e.target.parentElement.parentElement.children[1].children[0].classList.remove(
               `glide-up-first`);
-          e.target.parentElement.parentElement.children[1].classList.add(
+          e.target.parentElement.parentElement.children[1].children[0].classList.add(
               `glide-up-last`);
-          e.target.parentElement.parentElement.appendChild(
-          e.target.parentElement.parentElement.children[1]);
+          e.target.parentElement.parentElement.children[1].appendChild(
+          e.target.parentElement.parentElement.children[1].children[0]);
           await opCSlider.pause(200);
-          e.target.parentElement.parentElement.lastElementChild.classList.remove(
+          e.target.parentElement.parentElement.children[1].lastElementChild.classList.remove(
               `glide-up-last`);}
       if (e.target.classList.contains(`arrow-right`) &&
           e.target.parentElement.parentElement.classList.contains(
               `module-cascade-slider`)) {
-          e.target.parentElement.parentElement.lastElementChild.classList.add(
+          e.target.parentElement.parentElement.children[1].lastElementChild.classList.add(
               `glide-down-last`);
           await opCSlider.pause(200);
-          e.target.parentElement.parentElement.lastElementChild.classList.remove(
+          e.target.parentElement.parentElement.children[1].lastElementChild.classList.remove(
               `glide-down-last`);
-          e.target.parentElement.parentElement.lastElementChild.classList.add(
+          e.target.parentElement.parentElement.children[1].lastElementChild.classList.add(
               `glide-up-first`);
-          e.target.parentElement.parentElement.insertBefore(
-          e.target.parentElement.parentElement.lastElementChild,
-          e.target.parentElement.parentElement.children[1]);
+          e.target.parentElement.parentElement.children[1].insertBefore(
+          e.target.parentElement.parentElement.children[1].lastElementChild,
+          e.target.parentElement.parentElement.children[1].children[0]);
           await opCSlider.pause(200);
-          e.target.parentElement.parentElement.children[1].classList.remove(
+          e.target.parentElement.parentElement.children[1].children[0].classList.remove(
               `glide-up-first`);}
         }
       }
