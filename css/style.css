@@ -83,7 +83,7 @@ a {
     font-size: 20px; }
     @media (max-width: 767.98px) {
       a.learn-more {
-        font-size: 16px; } }
+        font-size: 14px; } }
   a.back {
     color: #001F33;
     display: inline-block; }
@@ -568,7 +568,7 @@ ul {
   height: 100%; }
   @media (max-width: 1199.98px) {
     .cart-media {
-      padding: 20px; } }
+      padding: 25px; } }
 
 .scroll-media {
   flex-wrap: nowrap;
@@ -814,7 +814,11 @@ ul {
     transition: all 0.3s; }
     @media (max-width: 767.98px) {
       .arrow-container .arrow {
-        transform: translateY(50%); } }
+        transform: translateY(50%);
+        height: 34px;
+        width: 34px;
+        font-size: 16px;
+        line-height: 26px; } }
     .arrow-container .arrow.arrow-left {
       right: 0; }
     .arrow-container .arrow.arrow-right {
